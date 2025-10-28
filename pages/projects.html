@@ -1,0 +1,101 @@
+    <!DOCTYPE html>
+    <html lang="ru">
+      <head>
+        <title>Проекты</title>
+        <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/styles.css" />
+<script defer src="../scripts/main.js"></script>
+
+      </head>
+      <body>
+        <header class="site-header">
+  <div class="container nav">
+    <a class="logo" href="/index.html">Моё портфолио</a>
+
+    <button class="burger"
+            aria-expanded="false"
+            aria-controls="site-menu"
+            aria-label="Открыть меню">
+            <div class="span_cont">
+      <span class="burger_span"></span>
+      <span class="burger_span"></span>
+      <span class="burger_span"></span>
+      </div>
+    </button>
+
+    <nav id="site-menu">
+      <a href="/index.html">Главная</a>
+      <a href="/pages/projects.html">Проекты</a>
+      <a href="/pages/diary.html">Дневник</a>
+      <a href="/pages/contacts.html">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+        <main class="container">
+          <section>
+            <h1>Мои проекты</h1>
+            <div class="filters">
+              <button class="btn btn-filter" data-filter="all">Все</button>
+              <button class="btn btn-filter" data-filter="html">HTML</button>
+              <button class="btn btn-filter" data-filter="js">JS</button>
+              <button class="btn btn-filter" data-filter="react">React</button>
+            </div>
+            <div class="grid" id="projects-grid">
+              <article class="card" data-tags="html">
+                <img src="../images/kapro.png" class="thumb">
+                <h3>Лендинг сайта по доставке грузов</h3>
+                <p>HTML, CSS, React, Tailwind</p> 
+                <button class="btn btn-outline" data-open-modal="#project1">Подробнее</button>
+              </article>
+              <article class="card" data-tags="js">
+                <img src="../images/todo.png" class="thumb">
+                <h3>Todo-приложение</h3>
+                <p>HTML, CSS, React</p> 
+                <button class="btn btn-outline" data-open-modal="#project2">Подробнее</button>
+              </article>
+              <article class="card" data-tags="react">
+                <img src="../images/prac.png" class="thumb">
+                <h3>Практические занятия по "Фронтенд и Бэкенд разработке"</h3>
+                <p>JavaScript</p>
+                <button class="btn btn-outline" data-open-modal="#project3">Подробнее</button>
+              </article>
+            </div>
+          </section>
+        </main>
+
+        
+        <dialog id="project1" class="modal">
+          <article>
+            <header><h3>Лендинг сайта по доставке грузов</h3><button class="close" data-close>x</button></header>
+            <p>Сайт по доставке грузов из Китая в Россию. В разработке был использован React и Tailwind CSS. Ссылка на репозиторий: <a href="https://github.com/mishalyamets1/kapro">https://github.com/mishalyamets1/kapro</a></p>
+            <footer><a class="btn" href="https://mishalyamets1.github.io/kapro/" target="_blank" rel="noopener">Открыть</a></footer>
+          </article>
+        </dialog>
+        <dialog id="project2" class="modal">
+          <article>
+            <header><h3>Todo-приложение</h3><button class="close" data-close>x</button></header>
+            <p>Приложение для отслеживания задач написанное на React. Реализована фильтрация, поиск, возможность отметить выполнение задачи, удаление задач и добавление новых.</p>
+            <footer><a class="btn" href="#" target="_blank" rel="noopener">Открыть</a></footer>
+          </article>
+        </dialog>
+        <dialog id="project3" class="modal">
+          <article>
+            <header><h3>Практические занятия по "Фронтенд и Бэкенд разработке"</h3><button class="close" data-close>x</button></header>
+            <p>В ходе практических занятий были созданы страницы: Главная, Новости, Товары, Контакты. На страницах Главная и Товары используется Bootstrap. Проект имеет адаптивный дизайн и возможность и изменения темы оформления. Ссылка на репозиторий: <a href="https://github.com/mishalyamets1/frontend-and-backend-practice">https://github.com/mishalyamets1/frontend-and-backend-practice</a></p>
+            <footer><a class="btn" href="https://mishalyamets1.github.io/frontend-and-backend-practice/" target="_blank" rel="noopener">Открыть </a></footer>
+          </article>
+        </dialog>
+
+        <footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Контакты: <a href="mailto:mishalamets123@yandex.ru">mishalamets123@yandex.ru</a></p>
+  </div>
+</footer>
+
+      </body>
+    </html>

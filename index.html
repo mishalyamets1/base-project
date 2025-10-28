@@ -1,0 +1,76 @@
+    <!DOCTYPE html>
+    <html lang="ru">
+      <head>
+        <title>Главная — Портфолио</title>
+        <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles/styles.css" />
+<script defer src="./scripts/main.js"></script>
+
+      </head>
+      <body>
+        <header class="site-header">
+  <div class="container nav">
+    <a class="logo" href="/index.html">Моё портфолио</a>
+
+    <button class="burger"
+            aria-expanded="false"
+            aria-controls="site-menu"
+            aria-label="Открыть меню">
+            <div class="span_cont">
+      <span class="burger_span"></span>
+      <span class="burger_span"></span>
+      <span class="burger_span"></span>
+      </div>
+    </button>
+
+    <nav id="site-menu">
+      <a href="/index.html">Главная</a>
+      <a href="/pages/projects.html">Проекты</a>
+      <a href="/pages/diary.html">Дневник</a>
+      <a href="/pages/contacts.html">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+        <main class="container">
+          <section class="hero">
+            <img src="./images/ya.jpg" alt="Фото" class="hero-photo" />
+            <div class="hero-text">
+              <h1>Лямец Михаил</h1>
+              <p>Привет! Я студент группы ЭФБО-07-24. Увлекаюсь веб‑разработкой.</p> 
+              <a class="btn" href="" >Скачать резюме</a>
+            </div>
+          </section>
+
+          <section class="skills">
+            <h2>Мои навыки</h2>
+            <ul class="skills-list">
+              <li><span>HTML/CSS</span><progress max="100" value="80"></progress></li>
+              <li><span>JavaScript</span><progress max="100" value="40"></progress></li>
+              <li><span>Bootstrap</span><progress max="100" value="60"></progress></li>
+              <li><span>React</span><progress max="100" value="30"></progress></li>
+            </ul>
+          </section>
+
+          <section class="projects">
+            <h2>Лучшие проекты</h2>
+            <div class="grid">
+              <article class="card"><img src="./images/kapro.png" class="thumb"></img><h3>Лендинг сайта по доставке грузов</h3></article>
+              <article class="card"><img src="./images/todo.png" class="thumb"></img><h3>To-do list</h3></article>
+              <article class="card"><img src="./images/prac.png" class="thumb"></img><h3>Практические занятия по "Фронтенд и Бэкенд разработке" </h3></article>
+              
+            </div>
+          </section>
+        </main>
+        <footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Контакты: <a href="mailto:mishalamets123@yandex.ru">mishalamets123@yandex.ru</a></p>
+  </div>
+</footer>
+
+      </body>
+    </html>

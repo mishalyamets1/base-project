@@ -1,0 +1,67 @@
+    <!DOCTYPE html>
+    <html lang="ru">
+      <head>
+        <title>Учебный дневник</title>
+        <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/styles.css" />
+<script defer src="../scripts/main.js"></script>
+
+      </head>
+      <body>
+        <header class="site-header">
+  <div class="container nav">
+    <a class="logo" href="/index.html">Моё портфолио</a>
+
+    <button class="burger"
+            aria-expanded="false"
+            aria-controls="site-menu"
+            aria-label="Открыть меню">
+            <div class="span_cont">
+      <span class="burger_span"></span>
+      <span class="burger_span"></span>
+      <span class="burger_span"></span>
+      </div>
+    </button>
+
+    <nav id="site-menu">
+      <a href="/index.html">Главная</a>
+      <a href="/pages/projects.html">Проекты</a>
+      <a href="/pages/diary.html">Дневник</a>
+      <a href="/pages/contacts.html">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+        <main class="container">
+          <section>
+            <h1>Мой учебный прогресс</h1>
+            <ul class="timeline" id="timeline">
+              <li><span>15 дек</span> — Вёрстка макета сайта </li>
+              <li><span>10 дек</span> — JavaScript основы </li>
+              <li><span>05 дек</span> — Работа с формами </li>
+              <li><span>01 дек</span> — Адаптивный дизайн </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Текущие курсы</h2>
+            <ul class="skills-list">
+              <li><span>Веб‑разработка</span><progress max="100" value="80"></progress></li>
+              <li><span>JavaScript</span><progress max="100" value="40"></progress></li>
+              <li><span>React</span><progress max="100" value="30"></progress></li>
+            </ul>
+            
+          </section>
+        </main>
+        <footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Контакты: <a href="mailto:mishalamets123@yandex.ru">mishalamets123@yandex.ru</a></p>
+  </div>
+</footer>
+
+      </body>
+    </html>

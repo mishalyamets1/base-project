@@ -1,0 +1,292 @@
+:root {
+  --bg: #0b0c10;
+  --muted: #1f2833;
+  --text: #c5c6c7;
+  --primary: #66fcf1;
+  --accent: #45a29e;
+  --card: #111217;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+
+.site-header {
+  border-bottom: 1px solid #222;
+  background: var(--card);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo {
+  font-weight: 700;
+  color: #fff;
+}
+
+nav a {
+  margin-left: 16px;
+  opacity: 0.9;
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+
+.site-footer {
+  border-top: 1px solid #222;
+  background: var(--card);
+  margin-top: 40px;
+}
+
+
+.hero {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 24px;
+  align-items: center;
+  margin: 24px 0;
+}
+
+.hero-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 16px;
+  background: #222;
+  object-fit: cover;
+}
+
+.hero-text h1 {
+  margin: 0 0 8px 0;
+  color: #fff;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--primary);
+  color: #000;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--text);
+}
+
+
+.skills {
+  margin-top: 24px;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+  margin-bottom: 200px;
+}
+
+.skills-list li {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+progress {
+  width: 100%;
+  height: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+  background: #222;
+}
+
+progress::-webkit-progress-value {
+  background: var(--accent);
+}
+
+
+.projects .grid,
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #222;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.card .thumb {
+  height: 120px;
+  background: #222;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+
+dialog.modal::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+dialog.modal {
+  border: none;
+  border-radius: 16px;
+  max-width: 560px;
+  width: 90%;
+  padding: 0;
+  background: var(--card);
+  color: var(--text);
+}
+
+dialog.modal article {
+  padding: 16px;
+}
+
+dialog.modal header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.close {
+  background: #222;
+  border: none;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+form {
+  display: grid;
+  gap: 12px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+}
+
+input,
+textarea {
+  background: #0e0f14;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 10px 12px;
+  color: #fff;
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 12px;
+  min-height: 16px;
+}
+
+
+@media (max-width: 640px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-photo {
+    justify-self: start;
+  }
+}
+.burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #222;
+  border-radius: 10px;
+  background: #15161b;
+  cursor: pointer;
+}
+.burger_span {
+  display: flex;
+  flex-direction: column;
+  width: 22px;
+  height: 2px;
+  background: #ffffff;
+  margin: 3px 0;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .burger { display: inline-flex; }
+
+  .site-header .nav nav {
+    position: absolute;
+    top: 64px; 
+    left: 0;
+    right: 0;
+    display: none;
+    background: var(--card);
+    border-bottom: 1px solid #222;
+    padding: 16px 24px 20px;
+    z-index: 9;
+  }
+  .site-header .nav nav.open {
+    display: grid;
+    gap: 12px;
+  }
+  .site-header .nav nav a {
+    margin: 0;
+    padding: 8px 0;
+  }
+}

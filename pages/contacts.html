@@ -1,0 +1,71 @@
+    <!DOCTYPE html>
+    <html lang="ru">
+      <head>
+        <title>Контакты</title>
+        <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/styles.css" />
+<script defer src="../scripts/main.js"></script>
+
+      </head>
+      <body>
+        <header class="site-header">
+  <div class="container nav">
+    <a class="logo" href="/index.html">Моё портфолио</a>
+
+    <button class="burger"
+            aria-expanded="false"
+            aria-controls="site-menu"
+            aria-label="Открыть меню">
+            <div class="span_cont">
+      <span class="burger_span"></span>
+      <span class="burger_span"></span>
+      <span class="burger_span"></span>
+      </div>
+    </button>
+
+    <nav id="site-menu">
+      <a href="/index.html">Главная</a>
+      <a href="/pages/projects.html">Проекты</a>
+      <a href="/pages/diary.html">Дневник</a>
+      <a href="/pages/contacts.html">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+        <main class="container">
+          <section class="contact">
+            <h1>Свяжитесь со мной</h1>
+            <form id="contact-form" novalidate>
+              <label>Имя
+                <input type="text" name="name" required placeholder="Иван"/>
+                <span class="error" data-for="name"></span>
+              </label>
+              <label>Email
+                <input type="email" name="email" required placeholder="example@mail.ru"/> 
+                <span class="error" data-for="email"></span>
+              </label>
+              <label>Сообщение
+                <textarea name="message" rows="5" required placeholder="Ваше сообщение"></textarea>
+                <span class="error" data-for="message"></span>
+              </label>
+              <button class="btn" type="submit">Отправить сообщение</button>
+            </form>
+            <div class="contact-info">
+              <p>📧 <a href="mailto:mishalamets123@yandex.ru">mishalamets123@yandex.ru</a></p>
+              <p>📱 GitHub: <a href="https://github.com/mishalyamets1" target="_blank" rel="noopener">mishalyamets1</a></p>
+              <p>📍 Москва, Россия</p>
+            </div>
+          </section>
+        </main>
+        <footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Контакты: <a href="mailto:mishalamets123@yandex.ru">mishalamets123@yandex.ru</a></p>
+  </div>
+</footer>
+
+      </body>
+    </html>
