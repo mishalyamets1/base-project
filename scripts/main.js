@@ -68,5 +68,41 @@ if(form){
   const mq = window.matchMedia('(min-width: 769px)');
   mq.addEventListener('change', (ev) => { if (ev.matches) closeMenu(); });
 })();
+// ===== Добавление записи в дневнике (в список #timeline) =====
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.getElementById('new-entry-text');
+  const btn = document.getElementById('add-entry-btn');
+  const list = document.getElementById('timeline'); // <-- правильный список
+
+  if (!input || !btn || !list) return;
+
+  const months = ['янв','фев','мар','апр','май','июн','июл','авг','сен','окт','ноя','дек'];
+  const escapeHTML = s => s.replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+
+  const addEntry = () => {
+    const text = input.value.trim();
+    if (!text) return;
+
+    const d = new Date();
+    const dd = String(d.getDate()).padStart(2,'0');
+    const label = `${dd} ${months[d.getMonth()]}`;  // формат как в твоём списке
+
+    const li = document.createElement('li');
+    li.innerHTML = `<span>${label}</span> — ${escapeHTML(text)}`;
+
+    // Добавляем в начало списка (новое — сверху)
+    list.insertBefore(li, list.firstChild);
+
+    input.value = '';
+    input.focus();
+  };
+
+  btn.addEventListener('click', addEntry);
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { e.preventDefault(); addEntry(); }
+  });
+});
+
+
 
 
