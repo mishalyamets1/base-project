@@ -1,4 +1,3 @@
-// Фильтры проектов
 document.querySelectorAll('.btn-filter').forEach(btn=>{
   btn.addEventListener('click', ()=>{
     const tag = btn.dataset.filter;
@@ -9,7 +8,7 @@ document.querySelectorAll('.btn-filter').forEach(btn=>{
   });
 });
 
-// Модалки
+
 document.querySelectorAll('[data-open-modal]').forEach(trigger=>{
   const target = document.querySelector(trigger.dataset.openModal);
   if (!target) return;
@@ -17,7 +16,7 @@ document.querySelectorAll('[data-open-modal]').forEach(trigger=>{
   target.querySelector('[data-close]')?.addEventListener('click', ()=> target.close());
 });
 
-// Валидация формы контактов
+
 const form = document.getElementById('contact-form');
 if(form){
   form.addEventListener('submit', (e)=>{
@@ -42,7 +41,7 @@ if(form){
     }
   });
 }
-// Burger menu (mobile)
+
 (() => {
   const burger = document.querySelector('.burger');
   const menu = document.getElementById('site-menu');
@@ -64,15 +63,15 @@ if(form){
   
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
   
-  // Автозакрытие при возврате к десктопу
+  
   const mq = window.matchMedia('(min-width: 769px)');
   mq.addEventListener('change', (ev) => { if (ev.matches) closeMenu(); });
 })();
-// ===== Добавление записи в дневнике (в список #timeline) =====
+
 document.addEventListener('DOMContentLoaded', () => {
   const input = document.getElementById('new-entry-text');
   const btn = document.getElementById('add-entry-btn');
-  const list = document.getElementById('timeline'); // <-- правильный список
+  const list = document.getElementById('timeline'); 
 
   if (!input || !btn || !list) return;
 
@@ -85,12 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const d = new Date();
     const dd = String(d.getDate()).padStart(2,'0');
-    const label = `${dd} ${months[d.getMonth()]}`;  // формат как в твоём списке
+    const label = `${dd} ${months[d.getMonth()]}`;  
 
     const li = document.createElement('li');
     li.innerHTML = `<span>${label}</span> — ${escapeHTML(text)}`;
 
-    // Добавляем в начало списка (новое — сверху)
+    
     list.insertBefore(li, list.firstChild);
 
     input.value = '';
@@ -102,7 +101,3 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Enter') { e.preventDefault(); addEntry(); }
   });
 });
-
-
-
-

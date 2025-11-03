@@ -289,20 +289,20 @@ textarea {
     padding: 8px 0;
   }
 }
-/* ====== Hover / Focus feedback ====== */
 
-/* Цвета можно подстроить под свою палитру */
+
+
 :root {
-  --accent: #2563eb;        /* насыщенный синий для hover */
+  --accent: #2563eb;        
   --accent-contrast: #ffffff;
-  --btn-bg: #2e7ef7;        /* текущий цвет кнопок, если есть другой — оставь */
-  --btn-bg-hover: #1e6af0;  /* контрастнее при наведении */
+  --btn-bg: #2e7ef7;        
+  --btn-bg-hover: #1e6af0;  
   --btn-border: rgba(0,0,0,.08);
   --shadow-sm: 0 2px 8px rgba(0,0,0,.08);
   --shadow-md: 0 8px 24px rgba(0,0,0,.12);
 }
 
-/* Плавность по умолчанию */
+
 .btn, #site-menu a, .card, .card .thumb {
   transition: 
     color .2s ease, 
@@ -312,7 +312,7 @@ textarea {
     transform .25s ease;
 }
 
-/* 1) Навигация */
+
 #site-menu a {
   position: relative;
   outline: none;
@@ -330,7 +330,7 @@ textarea {
 }
 #site-menu a:hover { color: var(--accent); }
 #site-menu a:hover::after { opacity: 1; transform: scaleX(1); }
-/* клавиатура */
+
 #site-menu a:focus-visible {
   color: var(--accent);
   outline: 3px solid color-mix(in oklab, var(--accent) 35%, transparent);
@@ -338,13 +338,13 @@ textarea {
 }
 #site-menu a:active { transform: translateY(1px); }
 
-/* 2) Кнопки (включая .btn-filter и .btn-outline) */
+
 .btn {
   background: #66fcf1;
   border: 1px solid var(--btn-border);
   
   box-shadow: var(--shadow-sm);
-  transform: translateZ(0); /* для лучшей отрисовки */
+  transform: translateZ(0); 
   will-change: transform;
 }
 .btn:hover {
@@ -353,20 +353,20 @@ textarea {
   transform: translateY(-2px);
 }
 .btn:active {
-  transform: translateY(0);           /* «нажалась» обратно */
+  transform: translateY(0);           
   box-shadow: var(--shadow-sm);
 }
-/* Обводка для клавиатуры */
+
 .btn:focus-visible {
   outline: 3px solid color-mix(in oklab, var(--accent) 45%, transparent);
   outline-offset: 2px;
 }
 
-/* Вариант «контурной» кнопки */
 
 
 
-/* Фильтр-кнопки в блоке проектов */
+
+
 .btn-filter[aria-pressed="true"],
 .btn-filter.is-active {
   background: var(--accent);
@@ -374,13 +374,13 @@ textarea {
   border-color: transparent;
 }
 
-/* 3) Карточки проектов: «подпрыгивают», не меняя размеров */
+
 .card {
   border-radius: 14px;
   border: 1px solid rgba(0,0,0,.08);
   box-shadow: var(--shadow-sm);
  
-  overflow: hidden;             /* чтобы зум картинки не вылезал */
+  overflow: hidden;             
   transform: translateZ(0);
   will-change: transform;
 }
@@ -389,7 +389,7 @@ textarea {
   box-shadow: var(--shadow-md);
 }
 .card:active { transform: translateY(-2px); }
-/* Избежать «скачков» сетки: фиксированная высота превью, зум внутри */
+
 .card .thumb {
   display: block;
   width: 100%;
@@ -399,7 +399,7 @@ textarea {
 }
 .card:hover .thumb { transform: scale(1.03); }
 
-/* 4) Элементы форм: подсветка фокуса */
+
 input, textarea, select {
   transition: box-shadow .2s ease, border-color .2s ease;
   outline: none;
@@ -409,14 +409,14 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
   box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent) 20%, transparent);
 }
 
-/* 5) Учитываем prefers-reduced-motion */
+
 @media (prefers-reduced-motion: reduce) {
   .btn, #site-menu a, .card, .card .thumb, input, textarea, select {
     transition: none !important;
   }
   .card:hover, .btn:hover, #site-menu a:hover { transform: none !important; }
 }
-/* sticky footer + центрирование БЕЗ изменения цветов */
+
 html, body { height: 100%; }
 
 body {
@@ -425,7 +425,7 @@ body {
   flex-direction: column;
 }
 
-main { flex: 1 0 auto; }       /* контент занимает высоту, чтобы футер ушёл вниз */
+main { flex: 1 0 auto; }       
 .site-footer { margin-top: auto; }
 
 .site-footer,
@@ -434,10 +434,10 @@ main { flex: 1 0 auto; }       /* контент занимает высоту, 
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;           /* центрируем текст */
+  text-align: center;           
   gap: 6px;
 }
-/* ===== КАРТОЧКИ ПРОЕКТОВ: кнопка прижата вниз ===== */
+
 .projects-grid .card {
   display: flex;
   flex-direction: column;
@@ -446,36 +446,36 @@ main { flex: 1 0 auto; }       /* контент занимает высоту, 
 .projects-grid .card-body {
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto;         /* растягиваем тело карточки */
+  flex: 1 1 auto;         
 }
 
 .projects-grid .card-body .btn {
-  margin-top: auto;       /* прижимает кнопку вниз */
+  margin-top: auto;       
 } 
-/* ===== Исправление ширины основного контента ===== */
+
 main {
-  flex: 1 0 auto;          /* оставляем для прижатого футера */
+  flex: 1 0 auto;          
   width: 100%;
 }
 
 main > section,
 main > .container {
-  max-width: 1200px;       /* ширина, которая была изначально */
+  max-width: 1200px;       
   width: 100%;
-  margin: 0 auto;          /* центрируем */
+  margin: 0 auto;          
   padding-left: 16px;
   padding-right: 16px;
   box-sizing: border-box;
 }
 
-/* Для страниц contacts и diary (если у них свои классы) */
+
 .contacts,
 .diary {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
 }
-/* Кнопка "Подробнее" прижата к низу карточки (по id #projects-grid) */
+
 #projects-grid .card {
   display: flex;
   flex-direction: column;
@@ -483,50 +483,50 @@ main > .container {
 }
 
 #projects-grid .btn {
-  margin-top: auto;        /* отправляет кнопку в самый низ карточки */
-  align-self: flex-start;  /* чтобы не растягивалась на всю ширину */
+  margin-top: auto;        
+  align-self: flex-start;  
 }
-/* Растягиваем строки грида, чтобы карточки были одинаковой высоты */
+
 #projects-grid {
   grid-auto-rows: 1fr;
 }
 #projects-grid .card {
   height: 100%;
 }
-/* ===== БАЗОВЫЕ РЕЗИНОВЫЕ СЕТКИ ===== */
+
 img, video { max-width: 100%; height: auto; display: block; }
 .container { width: 100%; margin: 0 auto; padding: 0 16px; box-sizing: border-box; }
 
-/* Проекты: автоадаптивная сетка */
+
 #projects-grid, .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 16px;
 }
 
-/* Карточка: гибкая высота; превью фикс. на десктопе */
-.card { display: flex; flex-direction: column; height: 100%; }
+
+.card { display: flex; flex-direction: column; height: 100%; width: 300px; }
 .card .thumb { width: 100%; height: 180px; object-fit: cover; }
 .card .card-body { display: flex; flex-direction: column; flex: 1; }
 .card .card-body .btn { margin-top: auto; align-self: flex-start; }
 
-/* Формы: тянутся на всю ширину */
+
 input, textarea, select { width: 100%; box-sizing: border-box; }
 
-/* ===== МОДАЛКА: безопасные размеры на мобиле ===== */
+
 .modal-content { max-width: 600px; width: min(92vw, 600px); }
 
-/* ===== НАВИГАЦИЯ (бургер) ===== */
-/* Десктоп по умолчанию */
+
+
 .burger { display: none; }
 
-/* ====== МЕДИА-ТОЧКИ ====== */
 
-/* <= 1024px (планшеты) */
+
+
 @media (max-width: 1024px) {
   .container { padding: 0 14px; }
 
-  /* сетка проектов: карточки покомпактнее */
+  
   #projects-grid, .projects-grid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 14px;
@@ -535,74 +535,74 @@ input, textarea, select { width: 100%; box-sizing: border-box; }
   .card .thumb { height: 160px; }
 }
 
-/* <= 768px (телефоны) */
+
 @media (max-width: 768px) {
-  /* Хедер: прячем горизонтальное меню, показываем бургер */
+  
   .burger { display: inline-flex; align-items: center; cursor: pointer; }
   #site-menu {
     position: fixed;
-    inset: 56px 0 auto 0;         /* под хедером */
+    inset: 56px 0 auto 0;         
     display: none;
     flex-direction: column;
     gap: 12px;
     padding: 12px 16px;
-    background: inherit;          /* НЕ меняем цветовую схему */
+    background: inherit;          
     border-top: 1px solid rgba(0,0,0,.08);
   }
   #site-menu.open { display: flex; }
 
-  /* Контент: комфортные отступы */
+  
   main > section, main > .container { padding-left: 12px; padding-right: 12px; }
 
-  /* Сетка: 1 колонка, если экран узкий */
+  
   #projects-grid, .projects-grid {
     grid-template-columns: 1fr;
     gap: 12px;
   }
 
-  /* Карточка: превью ниже, текст компактнее */
+  
   .card .thumb { height: 150px; }
 
-  /* Кнопки: можно растянуть на всю ширину, если нужно */
-  /* .btn { width: 100%; }                   <- включи, если хочешь full-width */
-  /* .card .card-body .btn { align-self: stretch; } */
+  
+  
+  
 }
 
-/* <= 480px (очень узкие) */
+
 @media (max-width: 480px) {
   .container { padding: 0 10px; }
   .card .thumb { height: 140px; }
   .modal-content { width: 94vw; padding: 24px; border-radius: 12px; }
 }
-/* ===== БУРГЕР-МЕНЮ: фон непрозрачный ===== */
+
 @media (max-width: 768px) {
   #site-menu {
-    background-color: #0b0c10;      /* или тот фон, что у шапки */
-    backdrop-filter: none;         /* без прозрачности / blur */
+    background-color: #0b0c10;      
+    backdrop-filter: none;         
     border-top: 1px solid rgba(0,0,0,0.1);
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   }
 }
 
-/* ===== HERO-ИЗОБРАЖЕНИЕ: больше и по центру ===== */
+
 .hero-image, .hero img {
   display: block;
-  max-width: 320px;                /* было меньше — увеличиваем */
-  width: 80%;                      /* адаптивная ширина */
+  max-width: 320px;                
+  width: 80%;                      
   height: auto;
-  margin: 0 auto;                  /* по центру */
-               /* если нужно круглое фото */
+  margin: 0 auto;                  
+               
   object-fit: cover;
 }
 
-/* Для маленьких экранов можно чуть уменьшить */
+
 @media (max-width: 768px) {
   .hero-image, .hero img {
     max-width: 260px;
     width: 70%;
   }
 }
-/* === ДЕСКТОП: вернуть хедер 1в1 как был === */
+
 @media (min-width: 769px) {
   header.site-header,
   .site-header {
@@ -615,7 +615,7 @@ input, textarea, select { width: 100%; box-sizing: border-box; }
     height: auto;
   }
 
-  /* Навигация как раньше */
+  
   .nav {
     display: flex;
     align-items: center;
@@ -623,7 +623,7 @@ input, textarea, select { width: 100%; box-sizing: border-box; }
     gap: 16px;
   }
 
-  /* Меню строкой, бургер прячем */
+  
   #site-menu {
     display: flex !important;
     position: static !important;
@@ -637,8 +637,6 @@ input, textarea, select { width: 100%; box-sizing: border-box; }
   }
   .burger { display: none !important; }
 
-  /* Восстановить исходные паддинги контейнера на десктопе */
+  
   .container { padding: 24px !important; }
 }
-
-    
