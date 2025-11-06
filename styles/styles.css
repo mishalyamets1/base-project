@@ -640,3 +640,52 @@ input, textarea, select { width: 100%; box-sizing: border-box; }
   
   .container { padding: 24px !important; }
 }
+/* ===== СТИЛЬ ДЛЯ "МОЙ УЧЕБНЫЙ ПРОГРЕСС" (список #timeline) ===== */
+#timeline {
+  position: relative;
+  list-style: none;
+  margin: 32px 0;
+  padding-left: 32px;
+  border-left: 2px solid var(--accent);
+}
+
+#timeline li {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 8px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+#timeline li::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent);
+}
+
+#timeline li span {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--primary);
+  margin-right: 6px;
+}
+
+/* Небольшая адаптивность */
+@media (max-width: 640px) {
+  #timeline {
+    padding-left: 20px;
+    border-left-width: 1.5px;
+  }
+  #timeline li::before {
+    left: -8px;
+    width: 8px;
+    height: 8px;
+  }
+}
+

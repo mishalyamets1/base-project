@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const input = document.getElementById('new-entry-text');
   const btn = document.getElementById('add-entry-btn');
   const list = document.getElementById('timeline'); 
+  const error = document.getElementById('entry-error');
 
   if (!input || !btn || !list) return;
 
@@ -80,8 +81,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const addEntry = () => {
     const text = input.value.trim();
-    if (!text) return;
-
+    if (!text) {
+    if (error) error.textContent = 'Введите текст записи';
+    return;
+  }
+   if (error) error.textContent = '';
     const d = new Date();
     const dd = String(d.getDate()).padStart(2,'0');
     const label = `${dd} ${months[d.getMonth()]}`;  
