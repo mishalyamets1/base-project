@@ -12,6 +12,7 @@
 
       </head>
       <body>
+         <a class="skip-link" href="#main">Пропустить к содержимому</a>
         <header class="site-header">
   <div class="container nav">
     <a class="logo" href="/index.html">Моё портфолио</a>
@@ -36,22 +37,22 @@
   </div>
 </header>
 
-        <main class="container">
+        <main id="main" class="container">
           <section class="contact">
             <h1>Свяжитесь со мной</h1>
             <form id="contact-form" novalidate>
-              <label>Имя
-                <input type="text" name="name" required placeholder="Иван"/>
+              <label for="name">Имя</label>
+                <input type="text" name="name" id="name" required placeholder="Иван"/>
                 <span class="error" data-for="name"></span>
-              </label>
-              <label>Email
-                <input type="email" name="email" required placeholder="example@mail.ru"/> 
+              
+              <label for="email">Email</label>
+                <input type="email" name="email" id="email" required placeholder="example@mail.ru"/> 
                 <span class="error" data-for="email"></span>
-              </label>
-              <label>Сообщение
-                <textarea name="message" rows="5" required placeholder="Ваше сообщение"></textarea>
+              
+              <label for="message">Сообщение</label>
+                <textarea name="message" id="message" rows="5" required placeholder="Ваше сообщение"></textarea>
                 <span class="error" data-for="message"></span>
-              </label>
+              
               <button class="btn" type="submit">Отправить сообщение</button>
             </form>
             <div class="contact-info">
