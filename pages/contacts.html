@@ -10,6 +10,8 @@
 <link rel="stylesheet" href="../styles/styles.css" />
 <script defer src="../scripts/main.js"></script>
 
+        <meta name="color-scheme" content="dark light" />
+
       </head>
       <body>
          <a class="skip-link" href="#main">Пропустить к содержимому</a>
@@ -32,7 +34,7 @@
       <a href="../index.html">Главная</a>
       <a href="./projects.html">Проекты</a>
       <a href="./diary.html">Дневник</a>
-      <a href="./contacts.html">Контакты</a>
+      <a href="./contacts.html" aria-current="page">Контакты</a>
     </nav>
   </div>
 </header>
@@ -40,21 +42,27 @@
         <main id="main" class="container">
           <section class="contact">
             <h1>Свяжитесь со мной</h1>
-            <form id="contact-form" novalidate>
-              <label for="name">Имя</label>
-                <input type="text" name="name" id="name" required placeholder="Иван"/>
-                <span class="error" data-for="name"></span>
-              
-              <label for="email">Email</label>
-                <input type="email" name="email" id="email" required placeholder="example@mail.ru"/> 
-                <span class="error" data-for="email"></span>
-              
-              <label for="message">Сообщение</label>
-                <textarea name="message" id="message" rows="5" required placeholder="Ваше сообщение"></textarea>
-                <span class="error" data-for="message"></span>
-              
-              <button class="btn" type="submit">Отправить сообщение</button>
-            </form>
+            <form id="contact-form" novalidate aria-describedby="form-help" aria-labelledby="form-legend">
+  <div id="form-status" class="sr-only" aria-live="polite"></div>
+  <fieldset>
+    <legend id="form-legend">Форма обратной связи</legend>
+    <p id="form-help" class="form-help">Поля, отмеченные <span aria-hidden="true">*</span>, обязательны для заполнения.</p>
+
+    <label for="name">Имя <span aria-hidden="true">*</span></label>
+    <input type="text" name="name" id="name" required aria-required="true" autocomplete="name" aria-describedby="err-name" />
+    <span class="error" id="err-name" data-for="name"></span>
+
+    <label for="email">Email <span aria-hidden="true">*</span></label>
+    <input type="email" name="email" id="email" required aria-required="true" autocomplete="email" inputmode="email" aria-describedby="err-email" /> 
+    <span class="error" id="err-email" data-for="email"></span>
+
+    <label for="message">Сообщение <span aria-hidden="true">*</span></label>
+    <textarea name="message" id="message" rows="5" required aria-required="true" aria-describedby="err-message"></textarea>
+    <span class="error" id="err-message" data-for="message"></span>
+
+    <button class="btn" type="submit">Отправить сообщение</button>
+  </fieldset>
+</form>
             <div class="contact-info">
               <p>📧 <a href="mailto:mishalamets123@yandex.ru">mishalamets123@yandex.ru</a></p>
               <p>📱 GitHub: <a href="https://github.com/mishalyamets1" target="_blank" rel="noopener">mishalyamets1</a></p>

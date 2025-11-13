@@ -10,12 +10,13 @@
 <link rel="stylesheet" href="./styles/styles.css" />
 <script defer src="./scripts/main.js"></script>
 
+        <meta name="color-scheme" content="dark light" />
+
       </head>
       <body>
-        <a class="skip-link" href="#main">Пропустить к содержимому</a>
         <header class="site-header">
   <div class="container nav">
-    <a class="logo" href="/index.html">Моё портфолио</a>
+    <a class="logo" href="/index.html" aria-current="page">Моё портфолио</a>
 
     <button class="burger"
             aria-expanded="false"
@@ -29,7 +30,7 @@
     </button>
 
     <nav id="site-menu">
-     <a href="#">Главная</a>
+     <a href="#" aria-current="page">Главная</a>
       <a href="./pages/projects.html">Проекты</a>
       <a href="./pages/diary.html">Дневник</a>
       <a href="./pages/contacts.html">Контакты</a>
@@ -37,9 +38,9 @@
   </div>
 </header>
 
-        <main id="main" class="container">
+        <main class="container">
           <section class="hero">
-            <img src="./images/ya.jpg" alt="Фото" class="hero-photo" / width="320" height="320">
+            <img src="./images/ya.jpg" alt="Фото" class="hero-photo" />
             <div class="hero-text">
               <h1>Лямец Михаил</h1>
               <p>Привет! Я студент группы ЭФБО-07-24. Увлекаюсь веб‑разработкой.</p> 
@@ -60,9 +61,9 @@
           <section class="projects">
             <h2>Лучшие проекты</h2>
             <div class="grid">
-              <article class="card"><a href="./pages/projects.html"><img loading="lazy" decoding="async" src="./images/kapro.png" class="thumb" width="800" height="450"></img></a><h3>Лендинг сайта по доставке грузов</h3></article>
-              <article class="card"><a href="./pages/projects.html"><img loading="lazy" decoding="async" src="./images/todo.png" class="thumb" width="800" height="450"></img></a><h3>To-do list</h3></article>
-              <article class="card"><a href="./pages/projects.html"><img loading="lazy" decoding="async" src="./images/prac.png" class="thumb" width="800" height="450"></img></a><h3>Практические занятия по "Фронтенд и Бэкенд разработке" </h3></article>
+              <article class="card"><a href="./pages/projects.html"><img src="./images/kapro.png" class="thumb" alt="Лендинг сайта по доставке грузов"></img></a></a><h3>Лендинг сайта по доставке грузов</h3></article>
+              <article class="card"><a href="./pages/projects.html"><img src="./images/todo.png" class="thumb" alt="To-do list"></img></a></a><h3>To-do list</h3></article>
+              <article class="card"><a href="./pages/projects.html"><img src="./images/prac.png" class="thumb" alt="Практические занятия по "Фронтенд и Бэкенд разработке""></img></a></a><h3>Практические занятия по "Фронтенд и Бэкенд разработке"</h3></article>
               
             </div>
           </section>

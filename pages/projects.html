@@ -12,7 +12,9 @@
     />
     <link rel="stylesheet" href="../styles/styles.css" />
     <script defer src="../scripts/main.js"></script>
-  </head>
+    <meta name="color-scheme" content="dark light" />
+
+      </head>
   <body>
     <a class="skip-link" href="#main">Пропустить к содержимому</a>
     <header class="site-header">
@@ -34,14 +36,14 @@
 
         <nav id="site-menu">
           <a href="../index.html">Главная</a>
-          <a href="./projects.html">Проекты</a>
+          <a href="./projects.html" aria-current="page">Проекты</a>
           <a href="./diary.html">Дневник</a>
           <a href="./contacts.html">Контакты</a>
         </nav>
       </div>
     </header>
 
-    <main id="main" class="container">
+    <main class="container">
       <section>
         <h1>Мои проекты</h1>
         <div class="filters">
@@ -52,7 +54,7 @@
         </div>
         <div class="grid" id="projects-grid">
           <article class="card" data-tags="html">
-            <img loading="lazy" decoding="async"
+            <img
               src="../images/kapro.png"
               class="thumb"
               alt="Лендинг — доставка грузов"
@@ -119,11 +121,11 @@
       </section>
     </main>
 
-    <dialog id="project1" class="modal">
+    <dialog id="project1" class="modal" aria-labelledby="title-project1" aria-modal="true"><dialog id="project1" class="modal">
       <article>
         <header>
-          <h3>Лендинг сайта по доставке грузов</h3>
-          <button class="close" data-close>x</button>
+          <h3><span id="title-project1">Лендинг сайта по доставке грузов</span></h3>
+          <button class="close" data-close aria-label="Закрыть модальное окно">×</button>
         </header>
         <p>
           Сайт по доставке грузов из Китая в Россию. В разработке был
@@ -143,11 +145,11 @@
         </footer>
       </article>
     </dialog>
-    <dialog id="project2" class="modal">
+    <dialog id="project2" class="modal" aria-labelledby="title-project2" aria-modal="true"><dialog id="project2" class="modal">
       <article>
         <header>
-          <h3>Todo-приложение</h3>
-          <button class="close" data-close>x</button>
+          <h3><span id="title-project2">Todo-приложение</span></h3>
+          <button class="close" data-close aria-label="Закрыть модальное окно">×</button>
         </header>
         <p>
           Приложение для отслеживания задач написанное на React. Реализована
@@ -168,11 +170,11 @@
         </footer>
       </article>
     </dialog>
-    <dialog id="project3" class="modal">
+    <dialog id="project3" class="modal" aria-labelledby="title-project3" aria-modal="true"><dialog id="project3" class="modal">
       <article>
         <header>
-          <h3>Практические занятия по "Фронтенд и Бэкенд разработке"</h3>
-          <button class="close" data-close>x</button>
+          <h3><span id="title-project3">Практические занятия по "Фронтенд и Бэкенд разработке"</span></h3>
+          <button class="close" data-close aria-label="Закрыть модальное окно">×</button>
         </header>
         <p>
           В ходе практических занятий были созданы страницы: Главная, Новости,
